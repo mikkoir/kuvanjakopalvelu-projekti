@@ -1,0 +1,82 @@
+#top{
+    display: flex;
+    justify-content: flex-start;
+    background: orange;
+    height: 100px;
+}
+h1{
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 1%;
+    padding-left: 10px;
+    color: white;
+}
+h2{
+    color: white;
+}
+body{
+    background-color: #222222;
+}
+#home{
+    background-color: black;
+}
+#login{
+    display: flex;
+    justify-content: right;
+}
+#search{
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    width: 100%;
+}
+input{
+    width: 40%;
+    height: 40px;
+}
+button{
+    position: static;
+    height: 47px;
+    width: 60px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: orange;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
