@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User</title>
+    <link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+<div id="top">
+
+    <h1 id="home" ><a href="index.html">3AM</a></h1>
+
+    <div id="search">
+        <input id = "haku" class="inputField inputSearchField" type="text" placeholder="Search...">
+        <button id="hakunappi">Search</button>
+    </div>
+    <div id="login">
+        <h2>Login</h2>
+    </div>
+
+</div>
+
+<div id="page-content">
+<div id="navib">
+
+    <div id="mySidenav" class="sidenav">
+        <span id="menuu" >&#9776;</span>
+        <a href="user.html">User page</a>
+        <a href="#">Services</a>
+        <a href="#">Clients</a>
+        <a href="#">Contact</a>
+    </div>
+    <div id="main">
+        <span id="avaa" >&#9776;</span>
+    </div>
+</div>
+
+<div id="content">
+
+    <button id="myBtn">Upload image</button>
+
+</div>
+
+</div>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div class="modal-content">
+        <div class="modal-header">
+            <span class="close">&times;</span>
+            <h2>Upload image</h2>
+        </div>
+        <div class="modal-body">
+            <form action="/upload" method="post" enctype="multipart/form-data" id="lomake">
+                <label>Kuva, ääni tai video
+                    <input type="file" name="kuva" accept="image/*">
+                </label>
+                <br>
+                <input type="text" name="fname" placeholder="Etunimi">
+                <br>
+                <input type="text" name="lname" placeholder="Sukunimi">
+                <br>
+
+
+
+            </form>
+        </div>
+        <div class="modal-footer">
+            <button type="submit">Lähetä</button>
+
+        </div>
+    </div>
+
+</div>
+
+
+<script src="js/app.js"></script>
+</body>
+</html>
