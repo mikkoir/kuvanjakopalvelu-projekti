@@ -1,0 +1,220 @@
+#top{
+    display: flex;
+    justify-content: flex-start;
+    background: orange;
+    height: 100px;
+}
+h1{
+    display: flex;
+    justify-content: flex-start;
+    padding-top: 1%;
+    padding-left: 10px;
+    color: white;
+}
+h2{
+    color: white;
+}
+span{
+    font-size: 30px;
+    cursor: pointer;
+}
+body{
+    background-color: #222222;
+}
+#home{
+    background-color: black;
+}
+#login{
+    display: flex;
+    justify-content: right;
+}
+#search{
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+    width: 100%;
+}
+input{
+    width: 40%;
+    height: 40px;
+}
+button{
+    position: static;
+    height: 47px;
+    width: 60px;
+}
+
+.sidenav {
+    height: 1000px;
+    width: 0;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: orange;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+#main {
+
+}
+
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+
+
+
+
+/* tästä */
+
+.modall {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    padding-top: 60px;
+    margin-left: 34%;
+}
+
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+.modal-content2 {
+    background-color: #fefefe;
+    margin: 5px auto; /* 15% from the top and centered */
+    border: 1px solid #888;
+    height: 300px;
+    width: 30%; /* Could be more or less, depending on screen size */
+}
+
+/* Close button on hover */
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+    from {-webkit-transform: scale(0)}
+    to {-webkit-transform: scale(1)}
+}
+
+@keyframes animatezoom {
+    from {transform: scale(0)}
+    to {transform: scale(1)}
+}
+
+.btn-group{
+
+    width: 100%;
+    display: flex;
+    float: left;
+}
+
+.modbut{
+    position: relative;
+    background-color: steelblue;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    cursor: pointer;
+    width: 20%;
+    margin-right: 2%;
+    margin-left: 2%;
+}
+
+.modbut2{
+    background-color: steelblue;
+    color: white;
+    border: none;
+    margin-top: 2%;
+    cursor: pointer;
+    width: 120px;
+}
+
+#canb{
+    margin-left: 30.5%;
+}
+#canb2{
+    margin-left: 49%;
+}
+
+#log2{
+    margin-left: 42%;
+}
+
+.spacer{
+    height: 30px;
+    width: 100%;
+}
+.container{
+    padding-left: auto;
+    padding-right: auto;
+}
+
+#us{
+    padding-right: 10%;
+    padding-left: 10%;
+}
+#pas{
+    padding-right: 10%;
+    padding-left: 11%;
+}
+.in{
+    width: 150px;
+}
+.psw{
+    margin-left: 28%;
+}
+
+#emaild{
+    margin-left: 29.5%;
+}
+#usi{
+    margin-left: 21.5%;
+}
+#pasw{
+    margin-left: 22.5%;
+}
+#pasw2{
+    margin-left: 5%;
+}
