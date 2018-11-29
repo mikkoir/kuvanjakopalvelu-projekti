@@ -100,7 +100,8 @@ button{
     height: 100%; /* Full height */
     overflow: auto; /* Enable scroll if needed */
     padding-top: 60px;
-    margin-left: 34%;
+    margin-left: 35%;
+    margin-right: 5%;
 }
 
 
@@ -109,14 +110,15 @@ button{
     background-color: #fefefe;
     margin: 5px auto; /* 15% from the top and centered */
     border: 1px solid #888;
-    width: 30%; /* Could be more or less, depending on screen size */
+    height: 300px;
+    width: 250px; /* Could be more or less, depending on screen size */
 }
 .modal-content2 {
     background-color: #fefefe;
     margin: 5px auto; /* 15% from the top and centered */
     border: 1px solid #888;
-    height: 300px;
-    width: 30%; /* Could be more or less, depending on screen size */
+    height: 389px;
+    width: 250px; /* Could be more or less, depending on screen size */
 }
 
 /* Close button on hover */
@@ -143,10 +145,9 @@ button{
 }
 
 .btn-group{
-
     width: 100%;
     display: flex;
-    float: left;
+    text-align: center;
 }
 
 .modbut{
@@ -157,64 +158,82 @@ button{
     margin: 8px 0;
     border: none;
     cursor: pointer;
-    width: 20%;
+    height: 47px;
+    width: 95%;
     margin-right: 2%;
     margin-left: 2%;
-}
-
-.modbut2{
-    background-color: steelblue;
-    color: white;
-    border: none;
-    margin-top: 2%;
-    cursor: pointer;
-    width: 120px;
-}
-
-#canb{
-    margin-left: 30.5%;
-}
-#canb2{
-    margin-left: 49%;
-}
-
-#log2{
-    margin-left: 42%;
+    text-align: center;
 }
 
 .spacer{
     height: 30px;
     width: 100%;
 }
+.container2{
+    width: 100%;
+    display: inline-block;
+    margin: auto;
+}
 .container{
-    padding-left: auto;
-    padding-right: auto;
+    margin-top: 9px;;
+    background-color:#f1f1f1;
+    height: 54%;
+    width: 100%;
+}
+.container3{
+    background-color:#f1f1f1;
+    height: 34%;
+    width: 100%;
+}
+.lab{
+    float: left;
+    margin-left: 20%;
+}
+
+.in{
+    display: inline-block;
+    width: 150px;
+    margin: auto;
+}
+.placement{
+    text-align: center;
+}
+
+#crea{
+    width: 100%;
+    text-align: center;
 }
 
 #us{
-    padding-right: 10%;
-    padding-left: 10%;
+
 }
 #pas{
-    padding-right: 10%;
-    padding-left: 11%;
-}
-.in{
-    width: 150px;
+
 }
 .psw{
-    margin-left: 28%;
-}
 
+}
 #emaild{
-    margin-left: 29.5%;
+
 }
 #usi{
-    margin-left: 21.5%;
+
 }
 #pasw{
-    margin-left: 22.5%;
+
 }
 #pasw2{
-    margin-left: 5%;
+
+}
+#canb{
+
+}
+#canb2{
+
+}
+#log2{
+
+}
+#log{
+
 }
