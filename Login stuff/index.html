@@ -33,18 +33,19 @@
             <!-- Modal Content -->
             <form class="modal-content animate">
 
+                <form action="login" method="post" id="lomake">
                 <div class="container2">
                     <div class="placement">
                     <div id="us">
                     <label class="lab" for="uname"><b>Username</b></label>
                         <br>
-                    <input class="in" type="text" placeholder="Enter Username" name="uname" required>
+                    <input class="in" type="text" placeholder="Enter Username" name="username" required>
                     </div>
 
                     <div id="pas">
                     <label class="lab" for="psw"><b>Password</b></label>
                         <br>
-                    <input class="in" type="password" placeholder="Enter Password" name="psw" required>
+                    <input class="in" type="password" placeholder="Enter Password" name="password" required>
                     </div>
                     </div>
                 </div>
@@ -56,6 +57,7 @@
                     </div>
                     <button  class="modbut" id="canb">Cancel</button>
                 </div>
+                </form>
             </form>
         </div>
 
@@ -67,7 +69,7 @@
             <!-- Modal Content -->
             <form class="modal-content2 animate">
 
-
+                <form action="/accCreate" method="post" id="lomake2">
                 <div class="container2">
                     <div class="placement">
                     <div id="emaild">
@@ -87,9 +89,9 @@
                         <input class="in" type="password" placeholder="Enter Password" name="psw" required>
                     </div>
                     <div id="pasw2">
-                        <label class="lab" for="psw"><b>Re-enter Password</b></label>
+                        <label class="lab" for="repsw"><b>Re-enter Password</b></label>
                         <br>
-                        <input class="in" type="password" placeholder="Re-enter Password" name="psw" required>
+                        <input class="in" type="password" placeholder="Re-enter Password" name="repsw" required>
                     </div>
                     </div>
                 </div>
@@ -102,6 +104,7 @@
                         <button  class="modbut" id="canb2">Cancel</button>
                     </div>
                 </div>
+                </form>
             </form>
         </div>
     </div>
