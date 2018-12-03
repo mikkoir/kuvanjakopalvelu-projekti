@@ -6,7 +6,7 @@ CREATE TABLE User
   email VARCHAR(100) NOT NULL,
   user_url INT NOT NULL,
   admin INT NOT NULL,
-  user_ID INT NOT NULL,
+  user_ID INT NOT NULL AUTO_INCREMENT,
   PRIMARY KEY (user_ID),
   UNIQUE (username),
   UNIQUE (email)
@@ -14,7 +14,7 @@ CREATE TABLE User
 
 CREATE TABLE Pic
 (
-  pic_ID INT NOT NULL,
+  pic_ID INT NOT NULL AUTO_INCREMENT,
   comment VARCHAR(100) NOT NULL,
   uthumb VARCHAR(100) NOT NULL,
   ufile VARCHAR(100) NOT NULL,
