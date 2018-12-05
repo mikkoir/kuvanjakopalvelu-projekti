@@ -22,9 +22,8 @@ document.getElementById('avaa').addEventListener('click',toggle);
 document.getElementById('menuu').addEventListener('click',toggle);
 
 
-
 // Get the modal
-let modal = document.getElementById('myModal');
+let modal = document.getElementById('myModal11');
 
 // Get the button that opens the modal
 let btn = document.getElementById("myBtn");
@@ -42,9 +41,10 @@ span.onclick = () => {
   modal.style.display = "none";
 };
 
-// When the user clicks anywhere outside of the modal, close it
+// / When the user clicks anywhere outside of the modal, close it
 window.onclick = (event) => {
   if (event.target == modal) {
     modal.style.display = "none";
   }
 };
+

@@ -18,12 +18,34 @@ h3{
     color: white;
 
 }
+p{
+    color: white;
+}
 img{
-    width: 900px;
+    width: 80%;
 }
 ul{
     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: relative;
 }
+li{
+
+}
+#napit{
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    padding-bottom: 4%;
+    padding-top: 0%;
+}
+#comm{
+
+}
+
 span{
     font-size: 200%;
     cursor: pointer;
@@ -54,10 +76,17 @@ button{
     width: 60px;
 }
 
+#myBtn{
+    width: 40%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
 #content{
     display: flex;
-    padding: 10%;
-    width: 86%;
+    width: 100%;
+    margin-left: 10%;
+    margin-right: 13%;
 }
 #page-content{
     display: flex;
@@ -141,7 +170,7 @@ button{
     margin: auto;
     padding: 0;
     /*border: 1px solid black;*/
-    width: 40%;
+    width: 100%;
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
     -webkit-animation-name: animatetop;
     -webkit-animation-duration: 0.4s;
@@ -181,7 +210,10 @@ button{
     color: white;
 }
 
-.modal-body {padding: 2px 16px;}
+.modal-body {
+    width: 500px;
+    padding: 2px 16px;
+}
 
 .modal-footer {
     padding: 2px 16px;

@@ -1,10 +1,10 @@
 'use strict';
 const sharp = require('sharp');
 
-const resizeImage = (kuva, koko, uusiKuva) => {
-  return sharp(kuva)
-  .resize(koko)
-  .toFile(uusiKuva).then((data) => {
+const doResize = (file, size, newPath) => {
+  return sharp(file)
+  .resize(size)
+  .toFile(newPath).then((data) => {
     console.log(data);
     return data;
   }).catch((err) => {
@@ -13,5 +13,5 @@ const resizeImage = (kuva, koko, uusiKuva) => {
 };
 
 module.exports = {
-  resizeImage: resizeImage,
+  doResize: doResize,
 };
