@@ -53,10 +53,11 @@ const insertToDB = (data, next) => {
 };
 
 const insertToDATAB =(data, next)=>{
-  database.insert2(data, connection, () => {
+  database.insert(data, connection, () => {
     next();
   });
 };
+
 
 const selectAll = (req, next) => {
   database.select(connection, (results) => {
@@ -95,7 +96,7 @@ app.use('/upload', (req, res, next) => {
     next();
   });
 });
-
+/*
 // tallenna tiedot tietokantaan
 app.use('/upload', (req, res, next) => {
   const data = [
@@ -107,17 +108,19 @@ app.use('/upload', (req, res, next) => {
   ];
   insertToDB(data, next);
 });
-
+*/
 // tallenna tiedot tietokantaan
 app.use('/upload', (req, res, next) => {
   const data = [
+      req.body.tag,
+      req.body.title,
+      req.user.user_ID,
       req.file.filename,
       req.file.filename+'_thumb',
+      req.file.mimetype,
   ];
   insertToDATAB(data, next);
 });
-
-
 
 // hae päivitetyt tiedot tietokannasta
 app.use('/upload', (req, res, next) => {
@@ -134,9 +137,6 @@ app.get('/images', (req, res) => {
     res.send(results);
   });
 });
-
-
-
 
 passport.serializeUser((user, done) => {
   console.log('serialize: ' + user);
@@ -239,6 +239,7 @@ app.post('/accCreate', (req, res, next) => {
 });
 
 app.get('/logout', function(req, res) {
+  res.cookie('user_ID', 0);
   req.logout();
   console.log('great success')
   res.redirect('./index.html');
@@ -260,6 +261,14 @@ app.get('/', (req, res) => {
   }
 });
 
+app.get('/checkLogin', (req, res) => {
+  if(req.user){
+    res.send('{"status":1 }');
+  }
+  else{
+    res.send('{"status":0 }');
+  }
+});
 app.use(express.static('public'));
 // serve node_modules
 app.use('/modules', express.static('node_modules'));

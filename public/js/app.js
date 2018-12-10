@@ -1,3 +1,17 @@
+fetch('./checkLogin').then((response) =>{
+  return response.json();
+}).then((json) =>{
+  if(json.status === 0){
+    document.getElementById('login').style.display = 'block';
+    document.getElementById('logout').style.display = 'none';
+  }
+  else{
+    document.getElementById('login').style.display = 'none';
+    document.getElementById('logout').style.display = 'block';
+  }
+});
+
+
 
 // Navi valikko avaa/sulkeutuu samasta napista
 let menu = 0;
@@ -10,7 +24,7 @@ toggle= ()=>{
   }
   else{
       menu = 1;
-      document.getElementById("mySidenav").style.width = "14%";
+      document.getElementById("mySidenav").style.width = "20%";
       //muista lisätä tähän siirrettävä kontentti ID
       //document.getElementById("content").style.marginLeft = "14%";
   }
@@ -26,7 +40,7 @@ document.getElementById('menuu').addEventListener('click',toggle);
 let modal = document.getElementById('myModal11');
 
 // Get the button that opens the modal
-let btn = document.getElementById("myBtn");
+let btn = document.getElementById("uppi");
 
 // Get the <span> element that closes the modal
 let span = document.getElementsByClassName("close")[0];

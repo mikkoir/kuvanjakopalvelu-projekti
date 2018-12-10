@@ -3,6 +3,11 @@ const lomake = document.querySelector('#lomake');
 const lista = document.querySelector('#result');
 const list = document.querySelector('#imagelist');
 
+console.log(document.cookie);
+const user_ID = document.cookie.split('=')[1];
+console.log('user_ID is', user_ID);
+
+
 const lahetaLomake = (evt) => {
   evt.preventDefault();
   const fd = new FormData(lomake);
@@ -21,7 +26,7 @@ const lahetaLomake = (evt) => {
       const li = document.createElement('li');
       if (item.mimetype.includes('image')) {
         const kuva = document.createElement('img');
-        kuva.src = thumbs + item.uthumb;
+        kuva.src = polku + item.ufile;
         li.appendChild(kuva);
       }
       lista.appendChild(li);
@@ -54,12 +59,11 @@ const getImages = () => {
 
         kuva.id = n;
 
-
+        h1.innerHTML = item.title;
         nappi.id = 'rate';
         fav.id = 'fav';
         divi.id = 'napit';
         comm.id = 'comm';
-        h1.innerHTML = 'OTSIKKO'
         comm.innerHTML = 'Comments';
         nappi.innerHTML = 'Rating';
         fav.innerHTML = 'tykkää';
@@ -73,7 +77,7 @@ const getImages = () => {
         divi.appendChild(nappi);
         divi.appendChild(fav);
 
-        comm.style.backgroundColor ='orange';
+        comm.style.backgroundColor ='red';
         comm.style.borderStyle = 'none';
         comm.style.width = '100%';
 

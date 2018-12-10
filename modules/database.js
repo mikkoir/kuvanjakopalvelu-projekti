@@ -17,7 +17,7 @@ const connect = () => {
 const select = (connection, callback) => {
   // simple query
   connection.query(
-      'SELECT * FROM wp_users;',
+      'SELECT * FROM post',
       (err, results, fields) => {
         //console.log(results); // results contains rows returned by server
         // console.log(fields); // fields contains extra meta data about results, if available
@@ -26,6 +26,8 @@ const select = (connection, callback) => {
       },
   );
 };
+
+
 
 const selectTag = (connection, callback) => {
   // simple query
@@ -67,29 +69,13 @@ const selectFav = (connection, callback) => {
 };
 
 
-
-/*
-const haeKuva = (connection, callback) => {
-  // simple query
-  connection.query(
-      'SELECT ufile FROM Pic WHERE pic_ID = ?;',
-      (err, results, fields) => {
-        //console.log(results); // results contains rows returned by server
-        // console.log(fields); // fields contains extra meta data about results, if available
-        console.log(err);
-        callback(results);
-      },
-  );
-};
-*/
-
 const insert = (data, connection, callback) => {
   // simple query
   connection.execute(
-      'INSERT INTO wp_users (ufname, ulname, ufile, uthumb, mimetype) VALUES (?, ?, ?, ?, ?);',
+      'INSERT INTO post (tag, title, user_ID ufile, uthumb, mimetype) VALUES (?, ?, ?, ?, ?, ?) ',
       data,
       (err, results, fields) => {
-        console.log(results); // results contains rows returned by server
+        console.log(results); // results conta  ins rows returned by server
         // console.log(fields); // fields contains extra meta data about results, if available
         console.log(err);
         callback();
@@ -97,33 +83,6 @@ const insert = (data, connection, callback) => {
   );
 };
 
-const insert2 = (data, connection, callback) => {
-  // simple query
-  connection.execute(
-      'INSERT INTO Pic (ufile, uthumb) VALUES (?, ?);',
-      data,
-      (err, results, fields) => {
-        console.log(results); // results contains rows returned by server
-        // console.log(fields); // fields contains extra meta data about results, if available
-        console.log(err);
-        callback();
-      },
-  );
-};
-
-const insertPost = (data, connection, callback) => {
-  // simple query
-  connection.execute(
-      'INSERT INTO post (tag, title) VALUES (?, ?, ?);',
-      data,
-      (err, results, fields) => {
-        console.log(results); // results contains rows returned by server
-        // console.log(fields); // fields contains extra meta data about results, if available
-        console.log(err);
-        callback();
-      },
-  );
-};
 
 const newUser = (data, connection, callback) => {
   // simple query
@@ -157,9 +116,8 @@ const login = (data, connection, callback) => {
 module.exports = {
   connect: connect,
   select: select,
-  insert: insert,
   newUser: newUser,
-  insert2: insert2,
+  insert: insert,
   rating: rating,
   selectFav: selectFav,
   login: login,

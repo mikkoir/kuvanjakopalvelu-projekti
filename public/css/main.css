@@ -1,7 +1,7 @@
 #top{
     display: flex;
     justify-content: flex-start;
-    background: orange;
+    background: linear-gradient(green, blue);
     height: 100px;
 }
 h1{
@@ -10,19 +10,24 @@ h1{
     padding-top: 1%;
     padding-left: 10px;
     color: white;
+    font-family: Arial;
+
 }
 h2{
     color: white;
+    font-family: Arial;
 }
 h3{
     color: white;
+    font-family: Arial;
 
 }
 p{
     color: white;
+    font-family: Arial;
 }
 img{
-    width: 80%;
+    width: 70%;
 }
 ul{
     list-style-type: none;
@@ -36,7 +41,7 @@ li{
 
 }
 #napit{
-    width: 80%;
+    width: 70%;
     display: flex;
     justify-content: space-evenly;
     padding-bottom: 4%;
@@ -54,7 +59,7 @@ body{
     background-color: #222222;
 }
 #home{
-    background-color: black;
+
 }
 #login{
     display: flex;
@@ -76,16 +81,23 @@ button{
     width: 60px;
 }
 
-#myBtn{
+#uppi{
+    position: relative;
+    top: 5%;
     width: 40%;
+    height: 2%;
     margin-left: 30%;
     margin-right: 30%;
+    background-color: dimgrey;
+    color: red;
+    font-size: 200%;
+
 }
 
 #content{
     display: flex;
     width: 100%;
-    margin-left: 10%;
+    margin-left: 13%;
     margin-right: 13%;
 }
 #page-content{
@@ -94,12 +106,12 @@ button{
 
 }
 .sidenav {
-    height: 1000px;
-    width: 0;
+    height: 100%;
     z-index: 1;
+    width: 0px;
     top: 0;
     left: 0;
-    background-color: orange;
+    background-color: brown;
     overflow-x: hidden;
     transition: 0.2s;
     padding-top: 0px;
@@ -108,6 +120,7 @@ button{
 
 .sidenav a {
     padding: 8px 8px 8px 32px;
+    width: 100px;
     text-decoration: none;
     font-size: 25px;
     color: #818181;
@@ -128,7 +141,7 @@ button{
 #main {
     width: 30px;
     position: absolute;
-    background-color: orange;
+    background-color: blue;
 
 }
 #navib{
@@ -144,8 +157,6 @@ button{
     .sidenav {padding-top: 0px;}
     .sidenav a {font-size: 18px;}
 }
-
-
 
 
 /* The Modal (background) */

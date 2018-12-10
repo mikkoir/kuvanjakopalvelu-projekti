@@ -8,45 +8,46 @@
 <body>
 <div id="top">
 
-    <h1 id="home" ><a href="index.html">3AM</a></h1>
+    <h1 id="home"><a href="index.html">3AM</a></h1>
 
     <div id="search">
-        <input id = "haku" class="inputField inputSearchField" type="text" placeholder="Search...">
+        <input id="haku" class="inputField inputSearchField" type="text" placeholder="Search...">
         <button id="hakunappi">Search</button>
     </div>
     <div id="login">
         <h2></h2>
     </div>
-
+    <div id="logout">
+        <form action="logout">
+            <button>Logout</button>
+        </form>
+    </div>
 </div>
 
 <div id="page-content">
-<div id="navib">
+    <div id="navib">
 
-    <div id="mySidenav" class="sidenav">
-        <span id="menuu" >&#9776;</span>
-        <a href="user.html">User page</a>
-        <a href="post.html">post</a>
-        <a href="#">Clients</a>
-        <a href="#">Contact</a>
+        <div id="mySidenav" class="sidenav">
+            <span id="menuu">&#9776;</span>
+            <a href="user.html">User page</a>
+            <a href="post.html">post</a>
+        </div>
+        <div id="main">
+            <span id="avaa">&#9776;</span>
+        </div>
     </div>
-    <div id="main">
-        <span id="avaa" >&#9776;</span>
+    <div>
+        <button id="uppi">Upload image</button>
+
+        <div id="content">
+
+            <ul id="result">
+
+            </ul>
+
+        </div>
+
     </div>
-</div>
-<div>
-    <button id="myBtn">Upload image</button>
-
-
-<div id="content">
-
-    <ul id="result">
-
-    </ul>
-
-</div>
-
-</div>
 </div>
 <!-- The Modal -->
 <div id="myModal11" class="modal">
@@ -63,9 +64,9 @@
                     <input type="file" name="kuva" accept="image/*">
                 </label>
                 <br>
-                <input type="text" name="fname" placeholder="Etunimi">
+                <input type="text" name="title" placeholder="Title">
                 <br>
-                <input type="text" name="lname" placeholder="Sukunimi">
+                <input type="text" name="tag" placeholder="tag">
                 <br>
                 <button id="sub1" type="submit">Lähetä</button>
             </form>
@@ -80,14 +81,13 @@
 <!-- The Modal -->
 <div id="myModal2" class="modal">
 
-
     <div class="modal-content">
         <div class="modal-header">
             <span class="close">&times;</span>
             <h2>Comments</h2>
         </div>
         <div class="modal-body">
-            <ul id ='kommentit' action="/kommentit">
+            <ul id='kommentit' action="/kommentit">
 
             </ul>
         </div>
