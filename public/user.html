@@ -8,37 +8,43 @@
 <body>
 <div id="top">
 
-    <h1 id="home"><a href="index.html">3AM</a></h1>
+    <h1 id="home"><a href="front.html">3AM</a></h1>
 
     <div id="search">
         <input id="haku" class="inputField inputSearchField" type="text" placeholder="Search...">
         <button id="hakunappi">Search</button>
     </div>
-    <div id="login">
-        <h2></h2>
-    </div>
+<div id="kirjaut2">
     <div id="logout">
         <form action="logout">
-            <button>Logout</button>
+            <button id="logou">Logout</button>
         </form>
     </div>
+    <div id="username2">
+        <h2 id="usernam2"><a href="user.html" id="liikuprkl">Profile</a></h2>
+    </div>
 </div>
-
+</div>
 <div id="page-content">
     <div id="navib">
 
         <div id="mySidenav" class="sidenav">
             <span id="menuu">&#9776;</span>
-            <a href="user.html">User page</a>
-            <a href="post.html">post</a>
+            <a action="/uimg" href="front.html">Own posts</a>
+            <a href="">Favourites</a>
+            <a href="">Followed</a>
+            <a href="">Best rating</a>
+            <a href="">Least rating</a>
+            <a href="">Users</a>
         </div>
         <div id="main">
             <span id="avaa">&#9776;</span>
         </div>
     </div>
     <div>
-        <button id="uppi">Upload image</button>
-
+        <div>
+        <button id="uppi">Upload</button>
+        </div>
         <div id="content">
 
             <ul id="result">
@@ -68,12 +74,13 @@
                 <br>
                 <input type="text" name="tag" placeholder="tag">
                 <br>
-                <button id="sub1" type="submit">Lähetä</button>
-            </form>
-        </div>
-        <div class="modal-footer">
+
 
         </div>
+        <div class="modal-footer">
+            <button id="sub1" type="submit">Post</button>
+        </div>
+        </form>
     </div>
 </div>
 
@@ -97,6 +104,6 @@
 
 
 <script src="js/app.js"></script>
-<script src="js/main.js"></script>
+<script src="js/user.js"></script>
 </body>
 </html>

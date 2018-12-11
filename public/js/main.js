@@ -35,59 +35,60 @@ const lahetaLomake = (evt) => {
 };
 
 const getImages = () => {
-  let n = 0;
-  let rat = 0;
-  fetch('/images').then((response) => {
-    return response.json();
-  }).then((json) => {
-    const polku = 'files/';
-    const thumbs = 'thumbs/';
-    lista.innerHTML = '';
-    json.forEach((item) => {
-      n++;
-      const h1 = document.createElement('h1');
-      const li = document.createElement('li');
-      const nappi = document.createElement('button');
-      const fav = document.createElement('button');
-      const divi = document.createElement('div');
-      const comm = document.createElement('button');
-      const rateyht = document.createElement('p');
-      if (item.mimetype.includes('image')) {
-        const kuva = document.createElement('img');
-        kuva.className = 'kuvat';
-        kuva.src = polku + item.ufile;
+    let n = 0;
+    let rat = 0;
+    fetch('/images').then((response) => {
+      return response.json();
+    }).then((json) => {
+      const polku = 'files/';
+      const thumbs = 'thumbs/';
+      lista.innerHTML = '';
+      json.forEach((item) => {
+        n++;
+        const h1 = document.createElement('h1');
+        const li = document.createElement('li');
+        const nappi = document.createElement('button');
+        const fav = document.createElement('button');
+        const divi = document.createElement('div');
+        const comm = document.createElement('button');
+        const rateyht = document.createElement('p');
+        if (item.mimetype.includes('image')) {
+          const kuva = document.createElement('img');
+          kuva.className = 'kuvat';
+          kuva.src = polku + item.ufile;
 
-        kuva.id = n;
+          kuva.id = n;
 
-        h1.innerHTML = item.title;
-        nappi.id = 'rate';
-        fav.id = 'fav';
-        divi.id = 'napit';
-        comm.id = 'comm';
-        comm.innerHTML = 'Comments';
-        nappi.innerHTML = 'Rating';
-        fav.innerHTML = 'tykkää';
+          h1.innerHTML = item.title;
+          nappi.id = 'rate';
+          fav.id = 'fav';
+          divi.id = 'napit';
+          comm.id = 'comm';
+          comm.innerHTML = 'Comments';
+          nappi.innerHTML = 'Rating';
+          fav.innerHTML = 'tykkää';
 
+          li.appendChild(h1);
+          li.appendChild(kuva);
+          li.appendChild(divi);
+          divi.appendChild(comm);
+          divi.appendChild(rateyht);
+          divi.appendChild(nappi);
+          divi.appendChild(fav);
 
-        li.appendChild(h1);
-        li.appendChild(kuva);
-        li.appendChild(divi);
-        divi.appendChild(comm);
-        divi.appendChild(rateyht);
-        divi.appendChild(nappi);
-        divi.appendChild(fav);
+          comm.style.backgroundColor ='dimgray';
+          comm.style.color = 'white';
+          comm.style.fontSize = '100%';
+          comm.style.borderStyle = 'none';
+          comm.style.width = '100%';
 
-        comm.style.backgroundColor ='red';
-        comm.style.borderStyle = 'none';
-        comm.style.width = '100%';
-
-        comm.onclick = () =>{
-          modal.style.display = "block";
-        };
-      }
-      lista.appendChild(li);
+          comm.onclick = () =>{
+            modal.style.display = "block";
+          };
+        }
+        lista.appendChild(li);
+      });
     });
-  });
 };
 
 

@@ -13,19 +13,23 @@
 
 <div id="top">
 
-    <h1 id="home" ><a href="index.html">3AM</a></h1>
-
+    <div>
+    <h1 id="home" ><a href="front.html">3AM</a></h1>
+    </div>
     <div id="search">
     <input id = "haku" class="inputField inputSearchField" type="text" placeholder="Search...">
     <button id="hakunappi">Search</button>
     </div>
 
     <!-- tästä -->
-
+<div id="kirjaut">
     <div id="logout">
         <form action="logout">
-            <button >Logout</button>
+            <button id="logou">Logout</button>
         </form>
+    </div>
+    <div id="username">
+        <h2 id="usernam"><a href="user.html">Profile</a></h2>
     </div>
     <div id="login">
         <button id="kys">Login</button>
@@ -57,7 +61,7 @@
                     <div class="container">
                         <button class="modbut" type="submit" value="login" id="log">Login</button>
                         <div id="crea">
-                            <span class="psw"><a href="#">Create account</a></span>
+                            <span class="psw"><a id="creata" href="#">Create account</a></span>
                         </div>
                         <button  class="modbut" id="canb">Cancel</button>
                     </div>
@@ -113,7 +117,7 @@
         </div>
     </div>
 
-
+</div>
 
     <!-- tähän -->
 </div>
@@ -124,8 +128,12 @@
 <div id="navib">
     <div id="mySidenav" class="sidenav">
         <span id="menuu" >&#9776;</span>
-        <a href="user.html">User page</a>
-        <a href="post.html">post</a>
+
+        <a action="/uimg">Own posts</a>
+        <a href="">Favourites</a>
+        <a href="">Followed</a>
+        <a href="">Best rating</a>
+        <a href="">Least rating</a>
     </div>
 
     <div id="main">
@@ -154,8 +162,15 @@
         </div>
         <div class="modal-body">
             <ul id ='kommentit' action="/kommentit">
-
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
+                <p>Lorem ipsum dolor sit amet</p>
             </ul>
+        </div>
+        <div class="modal-footer">
+            <input id="comment" class="inputField" type="text" placeholder="comment...">
+            <button id="submi">POST</button>
         </div>
     </div>
 

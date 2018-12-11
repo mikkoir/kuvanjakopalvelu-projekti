@@ -17,7 +17,7 @@ const connect = () => {
 const select = (connection, callback) => {
   // simple query
   connection.query(
-      'SELECT * FROM post',
+      'SELECT * FROM post ORDER BY post_ID DESC',
       (err, results, fields) => {
         //console.log(results); // results contains rows returned by server
         // console.log(fields); // fields contains extra meta data about results, if available
@@ -27,6 +27,20 @@ const select = (connection, callback) => {
   );
 };
 
+
+const selectUimg = (data, connection, callback) => {
+  // simple query
+  connection.query(
+      'SELECT * FROM post WHERE user_ID = ? ORDER BY post_ID DESC',
+      data,
+      (err, results, fields) => {
+        //console.log(results); // results contains rows returned by server
+        // console.log(fields); // fields contains extra meta data about results, if available
+        console.log(err);
+        callback(results);
+      },
+  );
+};
 
 
 const selectTag = (connection, callback) => {
@@ -72,7 +86,7 @@ const selectFav = (connection, callback) => {
 const insert = (data, connection, callback) => {
   // simple query
   connection.execute(
-      'INSERT INTO post (tag, title, user_ID ufile, uthumb, mimetype) VALUES (?, ?, ?, ?, ?, ?) ',
+      'INSERT INTO post (tag, title, user_ID, ufile, uthumb, mimetype) VALUES (?, ?, ?, ?, ?, ?) ',
       data,
       (err, results, fields) => {
         console.log(results); // results conta  ins rows returned by server
@@ -121,4 +135,5 @@ module.exports = {
   rating: rating,
   selectFav: selectFav,
   login: login,
+  selectUimg: selectUimg,
 };

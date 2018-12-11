@@ -4,10 +4,12 @@ fetch('./checkLogin').then((response) =>{
   if(json.status === 0){
     document.getElementById('login').style.display = 'block';
     document.getElementById('logout').style.display = 'none';
+    document.getElementById('username').style.display= 'none';
   }
   else{
     document.getElementById('login').style.display = 'none';
     document.getElementById('logout').style.display = 'block';
+    document.getElementById('username').style.display= 'block';
   }
 });
 
@@ -17,14 +19,12 @@ toggle= ()=>{
   if(menu === 1){
     menu = 0;
     document.getElementById("mySidenav").style.width = "0";
-    //muista lisätä tähän siirrettävä kontentti ID
-    //document.getElementById("content").style.marginLeft= "0";
+
   }
   else{
     menu = 1;
     document.getElementById("mySidenav").style.width = "20%";
-    //muista lisätä tähän siirrettävä kontentti ID
-    //document.getElementById("content").style.marginLeft = "14%";
+
   }
   console.log(menu);
 };
