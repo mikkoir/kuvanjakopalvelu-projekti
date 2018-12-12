@@ -251,7 +251,10 @@ app.use('/upload', (req, res, next) => {
 
 // lähetä tiedot selaimeen
 app.use('/upload', (req, res) => {
-  res.send(req.custom);
+  const data = req.user.user_ID;
+  database.selectUimg([data], connection, (results)=>{
+    res.send(results);
+  });
 });
 
 app.get('/images',(req, res) => {
@@ -262,7 +265,7 @@ app.get('/images',(req, res) => {
 
 app.get('/uimg', loggedIn, (req, res) => {
   const data = req.user.user_ID;
-  database.selectUimg(data, connection, (results)=>{
+  database.selectUimg([data], connection, (results)=>{
     res.send(results);
   });
 });

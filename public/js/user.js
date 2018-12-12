@@ -67,7 +67,7 @@ const getImages2 = () => {
         comm.id = 'comm';
         comm.innerHTML = 'Comments';
         nappi.innerHTML = 'Rating';
-        fav.innerHTML = 'tykkää';
+        fav.innerHTML = 'Like';
 
 
         li.appendChild(h1);
